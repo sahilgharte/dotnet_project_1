@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/dotnet_project_1/MyApp/MyApp.csproj": {}
+    "/workspaces/dotnet_project_1/MyApp/API/API.csproj": {}
   },
   "projects": {
-    "/workspaces/dotnet_project_1/MyApp/MyApp.csproj": {
+    "/workspaces/dotnet_project_1/MyApp/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/dotnet_project_1/MyApp/MyApp.csproj",
-        "projectName": "MyApp",
-        "projectPath": "/workspaces/dotnet_project_1/MyApp/MyApp.csproj",
+        "projectUniqueName": "/workspaces/dotnet_project_1/MyApp/API/API.csproj",
+        "projectName": "API",
+        "projectPath": "/workspaces/dotnet_project_1/MyApp/API/API.csproj",
         "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/dotnet_project_1/MyApp/obj/",
+        "outputPath": "/workspaces/dotnet_project_1/MyApp/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/codespace/.nuget/NuGet/NuGet.Config"
@@ -20,6 +20,7 @@
           "net7.0"
         ],
         "sources": {
+          "/usr/local/dotnet/7.0.306/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +38,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -49,6 +60,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
